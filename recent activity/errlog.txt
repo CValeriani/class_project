@@ -1,0 +1,79 @@
+# Latest error log
+
+> python train.py --logtostderr --train_dir=config/ --pipeline_config_path=object_detection/samples/configs/faster_rcnn_inception_v2_coco.config
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\platform\app.py:125: main (from __main__) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use object_detection/model_main.py.
+WARNING:tensorflow:From D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\legacy\trainer.py:266: create_global_step (from tensorflow.contrib.framework.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.create_global_step
+WARNING:tensorflow:From D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:num_readers has been reduced to 0 to match input file shards.
+WARNING:tensorflow:From D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\builders\dataset_builder.py:80: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+Traceback (most recent call last):
+  File "train.py", line 184, in <module>
+    tf.app.run()
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\platform\app.py", line 125, in run
+    _sys.exit(main(argv))
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\util\deprecation.py", line 324, in new_func
+    return func(*args, **kwargs)
+  File "train.py", line 180, in main
+    graph_hook_fn=graph_rewriter_fn)
+  File "D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\legacy\trainer.py", line 280, in train
+    train_config.prefetch_queue_capacity, data_augmentation_options)
+  File "D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\legacy\trainer.py", line 59, in create_input_queue
+    tensor_dict = create_tensor_dict_fn()
+  File "train.py", line 121, in get_next
+    dataset_builder.build(config)).get_next()
+  File "D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\builders\dataset_builder.py", line 135, in build
+    config.input_path[:], input_reader_config)
+  File "D:\Task Files\Binus\NSecurityA\OnLooker\object_detection\builders\dataset_builder.py", line 80, in read_dataset
+    sloppy=config.shuffle))
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 1605, in apply
+    return DatasetV1Adapter(super(DatasetV1, self).apply(transformation_func))
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 1127, in apply
+    dataset = transformation_func(self)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\experimental\ops\interleave_ops.py", line 88, in _apply_fn
+    buffer_output_elements, prefetch_input_elements)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\readers.py", line 133, in __init__
+    cycle_length, block_length)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2827, in __init__
+    super(InterleaveDataset, self).__init__(input_dataset, map_func)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2798, in __init__
+    map_func, self._transformation_name(), dataset=input_dataset)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2124, in __init__
+    self._function.add_to_graph(ops.get_default_graph())
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\function.py", line 490, in add_to_graph
+    self._create_definition_if_needed()
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\function.py", line 341, in _create_definition_if_needed
+    self._create_definition_if_needed_impl()
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\function.py", line 355, in _create_definition_if_needed_impl
+    whitelisted_stateful_ops=self._whitelisted_stateful_ops)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\function.py", line 883, in func_graph_from_py_func
+    outputs = func(*func_graph.inputs)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\dataset_ops.py", line 2099, in tf_data_structured_function_wrapper
+    ret = func(*nested_args)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\readers.py", line 247, in __init__
+    filenames, compression_type, buffer_size, num_parallel_reads)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\data\ops\readers.py", line 199, in __init__
+    filenames = ops.convert_to_tensor(filenames, dtype=dtypes.string)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\ops.py", line 1039, in convert_to_tensor
+    return convert_to_tensor_v2(value, dtype, preferred_dtype, name)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\ops.py", line 1097, in convert_to_tensor_v2
+    as_ref=False)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\ops.py", line 1175, in internal_convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "D:\System Components\Library\Python36\lib\site-packages\tensorflow\python\framework\ops.py", line 977, in _TensorTensorConversionFunction
+    (dtype.name, t.dtype.name, str(t)))
+ValueError: Tensor conversion requested dtype string for Tensor with dtype float32: 'Tensor("arg0:0", shape=(), dtype=float32, device=/device:CPU:0)'

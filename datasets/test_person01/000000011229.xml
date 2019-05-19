@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>test_person01</folder>
+	<filename>000000011229.jpg</filename>
+	<path>D:\Task Files\Binus\NSecurityA\OnLooker\datasets\test_person01\000000011229.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>426</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>181</xmin>
+			<ymin>84</ymin>
+			<xmax>326</xmax>
+			<ymax>348</ymax>
+		</bndbox>
+	</object>
+</annotation>
